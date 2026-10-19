@@ -1,0 +1,14 @@
+﻿severity,entity,rule,records,amount_at_risk,examples,description
+exclude,expenses,UNKNOWN_PROPERTY,1,834779.0,E0017,property_id отсутствует в справочнике объектов
+exclude,payments,DUP_EXACT,1,12211055.0,P0075,Полный дубль строки — учитываем первую копию
+exclude,payments,UNKNOWN_PROPERTY,1,12727390.0,P0017,property_id отсутствует в справочнике объектов
+exclude,reservations,CURRENCY_MISMATCH,1,4280874.0,R0061,"Валюта отличается от базовой валюты объекта, курса нет"
+exclude,reservations,DUP_EXACT,1,13628994.0,R0015,Полный дубль строки — учитываем первую копию
+exclude,reservations,NEGATIVE_OTA_FEE,1,3898667.0,R0102,Отрицательная комиссия OTA
+exclude,reservations,REFUND_GT_GROSS,1,7070068.0,R0072,Возврат больше стоимости бронирования
+exclude,reservations,UNKNOWN_PROPERTY,1,14462943.0,R0034,property_id отсутствует в справочнике объектов
+review,reservations,OVERLAP,85,797703246.0,"R0001, R0002, R0005, R0007, R0008, R0010",Пересечение периодов проживания на одном объекте
+review,payments,PAYMENT_FOR_EXCLUDED_RES,2,3998667.0,"P0036, P0051","Платёж по исключённому бронированию — деньги есть, начисления нет"
+info,reservations,DIRECT_WITH_OTA_FEE,31,301049562.0,"R0005, R0010, R0015, R0020, R0025, R0030",Прямое бронирование с комиссией OTA
+info,payments,PAYMENT_ZERO,7,0.0,"P0036, P0066, P0067, P0068, P0069, P0070",Нулевой платёж (запись без движения денег)
+info,dataset,SYS_PAYMENT_COVERAGE,1,0.0,payments.csv,Системный пропуск платежей

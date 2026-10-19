@@ -1,0 +1,135 @@
+﻿entity,record_id,source,row,property_id,rule,severity,message,related_id,amount_at_risk
+expenses,E0017,expenses.csv,18.0,V777,UNKNOWN_PROPERTY,exclude,Объект V777 не найден в properties.csv,,834779.0
+payments,P0017,payments.csv,18.0,V999,UNKNOWN_PROPERTY,exclude,Объект V999 не найден в properties.csv,,12727390.0
+payments,P0075,payments.csv,77.0,V009,DUP_EXACT,exclude,"Полная копия P0075 (строка 77) — исключена, первая копия остаётся",,12211055.0
+reservations,R0034,reservations.csv,35.0,V999,UNKNOWN_PROPERTY,exclude,Объект V999 не найден в properties.csv,,14462943.0
+reservations,R0061,reservations.csv,62.0,V001,CURRENCY_MISMATCH,exclude,"Валюта USD при базовой IDR; сумма 4,280,874 по порядку величины похожа на IDR — вероятно, ошибка кода валюты",,4280874.0
+reservations,R0072,reservations.csv,73.0,V020,REFUND_GT_GROSS,exclude,"refund 7,970,068 > gross 7,070,068 (разница 900,000) при статусе 'confirmed'",,7070068.0
+reservations,R0102,reservations.csv,103.0,V003,NEGATIVE_OTA_FEE,exclude,"ota_fee = -100,000",,3898667.0
+reservations,R0015,reservations.csv,152.0,V003,DUP_EXACT,exclude,"Полная копия R0015 (строка 152) — исключена, первая копия остаётся",,13628994.0
+payments,P0036,payments.csv,37.0,V020,PAYMENT_FOR_EXCLUDED_RES,review,"Бронирование R0072 исключено (REFUND_GT_GROSS); деньги учтены в cash, но не сверяются с начислением",R0072,0.0
+payments,P0051,payments.csv,52.0,V003,PAYMENT_FOR_EXCLUDED_RES,review,"Бронирование R0102 исключено (NEGATIVE_OTA_FEE); деньги учтены в cash, но не сверяются с начислением",R0102,3998667.0
+reservations,R0001,reservations.csv,2.0,V013,OVERLAP,review,"пересечение: R0090 (confirmed, 09-23–09-28), общих ночей: 2; пересечение: R0119 (confirmed, 09-16–09-23), общих ночей: 1","R0090, R0119",5285633.0
+reservations,R0002,reservations.csv,3.0,V019,OVERLAP,review,"пересечение: R0037 (confirmed, 10-16–10-19), общих ночей: 3",R0037,11778798.0
+reservations,R0005,reservations.csv,6.0,V005,OVERLAP,review,"пересечение: R0098 (confirmed, 09-11–09-15), общих ночей: 4",R0098,7849988.0
+reservations,R0007,reservations.csv,8.0,V002,OVERLAP,review,"пересечение: R0059 (confirmed, 09-13–09-17), общих ночей: 3",R0059,12360903.0
+reservations,R0008,reservations.csv,9.0,V014,OVERLAP,review,"пересечение: R0050 (confirmed, 10-22–10-27), общих ночей: 1",R0050,14828403.0
+reservations,R0010,reservations.csv,11.0,V005,OVERLAP,review,"пересечение: R0088 (confirmed, 10-10–10-18), общих ночей: 3; пересечение: R0117 (confirmed, 10-06–10-08), общих ночей: 2","R0088, R0117",2811012.0
+reservations,R0011,reservations.csv,12.0,V004,OVERLAP,review,"пересечение: R0024 (confirmed, 09-16–09-19), общих ночей: 1",R0024,5482028.0
+reservations,R0012,reservations.csv,13.0,V009,OVERLAP,review,"пересечение: R0070 (confirmed, 09-23–09-26), общих ночей: 1",R0070,12900194.0
+reservations,R0013,reservations.csv,14.0,V020,OVERLAP,review,"пересечение: R0043 (confirmed, 10-08–10-13), общих ночей: 2; пересечение: R0113 (confirmed, 10-04–10-09), общих ночей: 2","R0043, R0113",9796359.0
+reservations,R0017,reservations.csv,18.0,V003,OVERLAP,review,"пересечение: R0096 (confirmed, 09-06–09-14), общих ночей: 2",R0096,10190964.0
+reservations,R0018,reservations.csv,19.0,V013,OVERLAP,review,"пересечение: R0071 (confirmed, 10-01–10-08), общих ночей: 3",R0071,14989658.0
+reservations,R0019,reservations.csv,20.0,V018,OVERLAP,review,"пересечение: R0049 (confirmed, 09-02–09-10), общих ночей: 2",R0049,13491067.0
+reservations,R0021,reservations.csv,22.0,V002,OVERLAP,review,"пересечение: R0048 (confirmed, 10-10–10-18), общих ночей: 1",R0048,13943005.0
+reservations,R0023,reservations.csv,24.0,V003,OVERLAP,review,"пересечение: R0026 (confirmed, 10-13–10-17), общих ночей: 2; пересечение: R0085 (confirmed, 10-06–10-13), общих ночей: 4","R0026, R0085",9519266.0
+reservations,R0024,reservations.csv,25.0,V004,OVERLAP,review,"пересечение: R0011 (confirmed, 09-10–09-17), общих ночей: 1",R0011,9838148.0
+reservations,R0025,reservations.csv,26.0,V015,OVERLAP,review,"пересечение: R0063 (confirmed, 10-19–10-26), общих ночей: 2",R0063,9388940.0
+reservations,R0026,reservations.csv,27.0,V003,OVERLAP,review,"пересечение: R0023 (confirmed, 10-09–10-15), общих ночей: 2",R0023,11595421.0
+reservations,R0027,reservations.csv,28.0,V008,OVERLAP,review,"пересечение: R0112 (confirmed, 09-22–09-25), общих ночей: 1; modified-запись — возможно, старая версия не удалена: R0146 (modified, 09-19–09-24), общих ночей: 4","R0112, R0146",14311944.0
+reservations,R0028,reservations.csv,29.0,V020,OVERLAP,review,"пересечение: R0116 (confirmed, 09-28–10-01), общих ночей: 3",R0116,7444951.0
+reservations,R0029,reservations.csv,30.0,V003,OVERLAP,review,"пересечение: R0101 (confirmed, 09-13–09-17), общих ночей: 3; пересечение: R0103 (confirmed, 09-12–09-19), общих ночей: 5; пересечение: R0128 (confirmed, 09-13–09-16), общих ночей: 2","R0101, R0103, R0128",5255702.0
+reservations,R0030,reservations.csv,31.0,V001,OVERLAP,review,"пересечение: R0069 (confirmed, 09-10–09-17), общих ночей: 2",R0069,10364904.0
+reservations,R0031,reservations.csv,32.0,V008,OVERLAP,review,"пересечение: R0080 (confirmed, 09-03–09-11), общих ночей: 3",R0080,11687955.0
+reservations,R0033,reservations.csv,34.0,V008,OVERLAP,review,"те же даты — возможный дубль: R0056 (confirmed, 09-25–10-02), общих ночей: 7",R0056,14606373.0
+reservations,R0037,reservations.csv,38.0,V019,OVERLAP,review,"пересечение: R0002 (confirmed, 10-15–10-19), общих ночей: 3",R0002,13209000.0
+reservations,R0038,reservations.csv,39.0,V017,OVERLAP,review,"пересечение: R0045 (confirmed, 10-01–10-07), общих ночей: 3; modified-запись — возможно, старая версия не удалена: R0148 (modified, 10-04–10-09), общих ночей: 5","R0045, R0148",5469713.0
+reservations,R0039,reservations.csv,40.0,V003,OVERLAP,review,"пересечение: R0096 (confirmed, 09-06–09-14), общих ночей: 3",R0096,13681939.0
+reservations,R0040,reservations.csv,41.0,V012,OVERLAP,review,"пересечение: R0065 (confirmed, 09-11–09-19), общих ночей: 5",R0065,9199023.0
+reservations,R0041,reservations.csv,42.0,V010,OVERLAP,review,"пересечение: R0077 (confirmed, 09-10–09-15), общих ночей: 4; пересечение: R0121 (confirmed, 09-13–09-17), общих ночей: 1","R0077, R0121",8870514.0
+reservations,R0042,reservations.csv,43.0,V008,OVERLAP,review,"пересечение: R0127 (confirmed, 10-22–10-27), общих ночей: 2",R0127,14355006.0
+reservations,R0043,reservations.csv,44.0,V020,OVERLAP,review,"пересечение: R0013 (confirmed, 10-07–10-10), общих ночей: 2; пересечение: R0113 (confirmed, 10-04–10-09), общих ночей: 1; пересечение: R0122 (confirmed, 10-11–10-14), общих ночей: 2","R0013, R0113, R0122",7587282.0
+reservations,R0045,reservations.csv,46.0,V017,OVERLAP,review,"пересечение: R0038 (confirmed, 10-04–10-11), общих ночей: 3; пересечение: R0115 (confirmed, 09-30–10-03), общих ночей: 2; modified-запись — возможно, старая версия не удалена: R0148 (modified, 10-04–10-09), общих ночей: 3","R0038, R0115, R0148",9902337.0
+reservations,R0046,reservations.csv,47.0,V016,OVERLAP,review,"пересечение: R0060 (confirmed, 09-06–09-14), общих ночей: 2",R0060,7389375.0
+reservations,R0048,reservations.csv,49.0,V002,OVERLAP,review,"пересечение: R0021 (confirmed, 10-17–10-25), общих ночей: 1; пересечение: R0129 (confirmed, 10-13–10-17), общих ночей: 4","R0021, R0129",14520103.0
+reservations,R0049,reservations.csv,50.0,V018,OVERLAP,review,"пересечение: R0019 (confirmed, 09-02–09-04), общих ночей: 2",R0019,13076960.0
+reservations,R0050,reservations.csv,51.0,V014,OVERLAP,review,"пересечение: R0008 (confirmed, 10-26–10-30), общих ночей: 1",R0008,7909795.0
+reservations,R0051,reservations.csv,52.0,V019,OVERLAP,review,"пересечение: R0091 (confirmed, 09-06–09-14), общих ночей: 2",R0091,2774229.0
+reservations,R0056,reservations.csv,57.0,V008,OVERLAP,review,"те же даты — возможный дубль: R0033 (confirmed, 09-25–10-02), общих ночей: 7",R0033,5624162.0
+reservations,R0059,reservations.csv,60.0,V002,OVERLAP,review,"пересечение: R0007 (confirmed, 09-08–09-16), общих ночей: 3",R0007,5529743.0
+reservations,R0060,reservations.csv,61.0,V016,OVERLAP,review,"пересечение: R0046 (confirmed, 09-12–09-17), общих ночей: 2; пересечение: R0099 (confirmed, 09-06–09-08), общих ночей: 2; пересечение: R0124 (confirmed, 09-04–09-10), общих ночей: 4","R0046, R0099, R0124",13551414.0
+reservations,R0063,reservations.csv,64.0,V015,OVERLAP,review,"пересечение: R0025 (confirmed, 10-14–10-21), общих ночей: 2",R0025,8744980.0
+reservations,R0065,reservations.csv,66.0,V012,OVERLAP,review,"пересечение: R0040 (confirmed, 09-14–09-21), общих ночей: 5",R0040,10171643.0
+reservations,R0069,reservations.csv,70.0,V001,OVERLAP,review,"пересечение: R0030 (confirmed, 09-15–09-18), общих ночей: 2; пересечение: R0086 (confirmed, 09-06–09-13), общих ночей: 3","R0030, R0086",7120768.0
+reservations,R0070,reservations.csv,71.0,V009,OVERLAP,review,"пересечение: R0012 (confirmed, 09-21–09-24), общих ночей: 1",R0012,10425210.0
+reservations,R0071,reservations.csv,72.0,V013,OVERLAP,review,"пересечение: R0018 (confirmed, 09-28–10-04), общих ночей: 3",R0018,6736226.0
+reservations,R0075,reservations.csv,76.0,V010,OVERLAP,review,"пересечение: R0120 (confirmed, 09-18–09-23), общих ночей: 4",R0120,7403313.0
+reservations,R0076,reservations.csv,77.0,V010,OVERLAP,review,"пересечение: R0105 (confirmed, 09-06–09-10), общих ночей: 2",R0105,6934671.0
+reservations,R0077,reservations.csv,78.0,V010,OVERLAP,review,"пересечение: R0041 (confirmed, 09-10–09-14), общих ночей: 4; пересечение: R0121 (confirmed, 09-13–09-17), общих ночей: 2","R0041, R0121",11635626.0
+reservations,R0080,reservations.csv,81.0,V008,OVERLAP,review,"пересечение: R0031 (confirmed, 09-05–09-08), общих ночей: 3",R0031,5900495.0
+reservations,R0082,reservations.csv,83.0,V016,OVERLAP,review,"пересечение: R0094 (confirmed, 10-02–10-09), общих ночей: 2; пересечение: R0106 (confirmed, 09-23–09-28), общих ночей: 1","R0094, R0106",3978391.0
+reservations,R0085,reservations.csv,86.0,V003,OVERLAP,review,"пересечение: R0023 (confirmed, 10-09–10-15), общих ночей: 4",R0023,14058734.0
+reservations,R0086,reservations.csv,87.0,V001,OVERLAP,review,"пересечение: R0069 (confirmed, 09-10–09-17), общих ночей: 3",R0069,12024847.0
+reservations,R0088,reservations.csv,89.0,V005,OVERLAP,review,"пересечение: R0010 (confirmed, 10-06–10-13), общих ночей: 3",R0010,12860413.0
+reservations,R0090,reservations.csv,91.0,V013,OVERLAP,review,"пересечение: R0001 (confirmed, 09-22–09-25), общих ночей: 2",R0001,5851243.0
+reservations,R0091,reservations.csv,92.0,V019,OVERLAP,review,"пересечение: R0051 (confirmed, 09-12–09-17), общих ночей: 2",R0051,11220483.0
+reservations,R0092,reservations.csv,93.0,V017,OVERLAP,review,"пересечение: R0095 (confirmed, 09-15–09-18), общих ночей: 3",R0095,14123451.0
+reservations,R0094,reservations.csv,95.0,V016,OVERLAP,review,"пересечение: R0082 (confirmed, 09-27–10-04), общих ночей: 2",R0082,3980954.0
+reservations,R0095,reservations.csv,96.0,V017,OVERLAP,review,"пересечение: R0092 (confirmed, 09-11–09-18), общих ночей: 3",R0092,2936935.0
+reservations,R0096,reservations.csv,97.0,V003,OVERLAP,review,"пересечение: R0017 (confirmed, 09-09–09-11), общих ночей: 2; пересечение: R0039 (confirmed, 09-03–09-09), общих ночей: 3; пересечение: R0101 (confirmed, 09-13–09-17), общих ночей: 1; пересечение: R0103 (confirmed, 09-12–09-19), общих ночей: 2; пересечение: R0128 (confirmed, 09-13–09-16), общих ночей: 1","R0017, R0039, R0101, R0103, R0128",7008445.0
+reservations,R0097,reservations.csv,98.0,V008,OVERLAP,review,"пересечение: R0127 (confirmed, 10-22–10-27), общих ночей: 1",R0127,4660661.0
+reservations,R0098,reservations.csv,99.0,V005,OVERLAP,review,"пересечение: R0005 (confirmed, 09-10–09-17), общих ночей: 4",R0005,12291981.0
+reservations,R0099,reservations.csv,100.0,V016,OVERLAP,review,"пересечение: R0060 (confirmed, 09-06–09-14), общих ночей: 2; пересечение: R0124 (confirmed, 09-04–09-10), общих ночей: 2","R0060, R0124",3723650.0
+reservations,R0101,reservations.csv,102.0,V003,OVERLAP,review,"пересечение: R0029 (confirmed, 09-14–09-20), общих ночей: 3; пересечение: R0096 (confirmed, 09-06–09-14), общих ночей: 1; пересечение: R0103 (confirmed, 09-12–09-19), общих ночей: 4; пересечение: R0128 (confirmed, 09-13–09-16), общих ночей: 3","R0029, R0096, R0103, R0128",8619671.0
+reservations,R0103,reservations.csv,104.0,V003,OVERLAP,review,"пересечение: R0029 (confirmed, 09-14–09-20), общих ночей: 5; пересечение: R0096 (confirmed, 09-06–09-14), общих ночей: 2; пересечение: R0101 (confirmed, 09-13–09-17), общих ночей: 4; пересечение: R0128 (confirmed, 09-13–09-16), общих ночей: 3","R0029, R0096, R0101, R0128",10177318.0
+reservations,R0105,reservations.csv,106.0,V010,OVERLAP,review,"пересечение: R0076 (confirmed, 09-06–09-08), общих ночей: 2",R0076,11047098.0
+reservations,R0106,reservations.csv,107.0,V016,OVERLAP,review,"пересечение: R0082 (confirmed, 09-27–10-04), общих ночей: 1",R0082,10546533.0
+reservations,R0112,reservations.csv,113.0,V008,OVERLAP,review,"пересечение: R0027 (confirmed, 09-18–09-23), общих ночей: 1; modified-запись — возможно, старая версия не удалена: R0146 (modified, 09-19–09-24), общих ночей: 2","R0027, R0146",2598850.0
+reservations,R0113,reservations.csv,114.0,V020,OVERLAP,review,"пересечение: R0013 (confirmed, 10-07–10-10), общих ночей: 2; пересечение: R0043 (confirmed, 10-08–10-13), общих ночей: 1; пересечение: R0130 (confirmed, 10-04–10-06), общих ночей: 2","R0013, R0043, R0130",13741443.0
+reservations,R0115,reservations.csv,116.0,V017,OVERLAP,review,"пересечение: R0045 (confirmed, 10-01–10-07), общих ночей: 2",R0045,14920013.0
+reservations,R0116,reservations.csv,117.0,V020,OVERLAP,review,"пересечение: R0028 (confirmed, 09-25–10-03), общих ночей: 3",R0028,9314803.0
+reservations,R0117,reservations.csv,118.0,V005,OVERLAP,review,"пересечение: R0010 (confirmed, 10-06–10-13), общих ночей: 2",R0010,2795956.0
+reservations,R0119,reservations.csv,120.0,V013,OVERLAP,review,"пересечение: R0001 (confirmed, 09-22–09-25), общих ночей: 1",R0001,9471742.0
+reservations,R0120,reservations.csv,121.0,V010,OVERLAP,review,"пересечение: R0075 (confirmed, 09-19–09-23), общих ночей: 4",R0075,3066379.0
+reservations,R0121,reservations.csv,122.0,V010,OVERLAP,review,"пересечение: R0041 (confirmed, 09-10–09-14), общих ночей: 1; пересечение: R0077 (confirmed, 09-10–09-15), общих ночей: 2","R0041, R0077",5609704.0
+reservations,R0122,reservations.csv,123.0,V020,OVERLAP,review,"пересечение: R0043 (confirmed, 10-08–10-13), общих ночей: 2",R0043,3069750.0
+reservations,R0124,reservations.csv,125.0,V016,OVERLAP,review,"пересечение: R0060 (confirmed, 09-06–09-14), общих ночей: 4; пересечение: R0099 (confirmed, 09-06–09-08), общих ночей: 2","R0060, R0099",12543291.0
+reservations,R0126,reservations.csv,127.0,V015,OVERLAP,review,"modified-запись — возможно, старая версия не удалена: R0145 (modified, 09-08–09-13), общих ночей: 4",R0145,9733373.0
+reservations,R0127,reservations.csv,128.0,V008,OVERLAP,review,"пересечение: R0042 (confirmed, 10-24–10-26), общих ночей: 2; пересечение: R0097 (confirmed, 10-26–10-29), общих ночей: 1","R0042, R0097",10971378.0
+reservations,R0128,reservations.csv,129.0,V003,OVERLAP,review,"пересечение: R0029 (confirmed, 09-14–09-20), общих ночей: 2; пересечение: R0096 (confirmed, 09-06–09-14), общих ночей: 1; пересечение: R0101 (confirmed, 09-13–09-17), общих ночей: 3; пересечение: R0103 (confirmed, 09-12–09-19), общих ночей: 3","R0029, R0096, R0101, R0103",7664910.0
+reservations,R0129,reservations.csv,130.0,V002,OVERLAP,review,"пересечение: R0048 (confirmed, 10-10–10-18), общих ночей: 4",R0048,13602857.0
+reservations,R0130,reservations.csv,131.0,V020,OVERLAP,review,"пересечение: R0113 (confirmed, 10-04–10-09), общих ночей: 2",R0113,12463059.0
+reservations,R0145,reservations.csv,146.0,V015,OVERLAP,review,"modified-запись — возможно, старая версия не удалена: R0126 (confirmed, 09-09–09-14), общих ночей: 4",R0126,9974242.0
+reservations,R0146,reservations.csv,147.0,V008,OVERLAP,review,"modified-запись — возможно, старая версия не удалена: R0027 (confirmed, 09-18–09-23), общих ночей: 4; modified-запись — возможно, старая версия не удалена: R0112 (confirmed, 09-22–09-25), общих ночей: 2","R0027, R0112",2521489.0
+reservations,R0148,reservations.csv,149.0,V017,OVERLAP,review,"modified-запись — возможно, старая версия не удалена: R0038 (confirmed, 10-04–10-11), общих ночей: 5; modified-запись — возможно, старая версия не удалена: R0045 (confirmed, 10-01–10-07), общих ночей: 3","R0038, R0045",8136835.0
+reservations,R0149,reservations.csv,150.0,V009,OVERLAP,review,"modified-запись — возможно, старая версия не удалена: R0150 (modified, 09-01–09-09), общих ночей: 7",R0150,14235106.0
+reservations,R0150,reservations.csv,151.0,V009,OVERLAP,review,"modified-запись — возможно, старая версия не удалена: R0149 (modified, 09-02–09-09), общих ночей: 7",R0149,14712115.0
+dataset,payments.csv,payments.csv,,,SYS_PAYMENT_COVERAGE,info,"Платежи есть только у бронирований с чётным номером; у всех 75 нечётных — нет. Такой паттерн похож на неполную выгрузку payments, а не на реальные неплатежи",,0.0
+payments,P0036,payments.csv,37.0,V020,PAYMENT_ZERO,info,amount = 0,,0.0
+payments,P0066,payments.csv,67.0,V012,PAYMENT_ZERO,info,amount = 0,,0.0
+payments,P0067,payments.csv,68.0,V013,PAYMENT_ZERO,info,amount = 0,,0.0
+payments,P0068,payments.csv,69.0,V020,PAYMENT_ZERO,info,amount = 0,,0.0
+payments,P0069,payments.csv,70.0,V004,PAYMENT_ZERO,info,amount = 0,,0.0
+payments,P0070,payments.csv,71.0,V004,PAYMENT_ZERO,info,amount = 0,,0.0
+payments,P0071,payments.csv,72.0,V002,PAYMENT_ZERO,info,amount = 0,,0.0
+reservations,R0005,reservations.csv,6.0,V005,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 941,999 — это комиссия эквайринга/канала? нужно правило",,7849988.0
+reservations,R0010,reservations.csv,11.0,V005,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 337,321 — это комиссия эквайринга/канала? нужно правило",,2811012.0
+reservations,R0015,reservations.csv,16.0,V003,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 2,316,929 — это комиссия эквайринга/канала? нужно правило",,13628994.0
+reservations,R0020,reservations.csv,21.0,V011,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 612,470 — это комиссия эквайринга/канала? нужно правило",,3602767.0
+reservations,R0025,reservations.csv,26.0,V015,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,408,341 — это комиссия эквайринга/канала? нужно правило",,9388940.0
+reservations,R0030,reservations.csv,31.0,V001,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,762,034 — это комиссия эквайринга/канала? нужно правило",,10364904.0
+reservations,R0035,reservations.csv,36.0,V018,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,363,390 — это комиссия эквайринга/канала? нужно правило",,9089264.0
+reservations,R0040,reservations.csv,41.0,V012,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,379,853 — это комиссия эквайринга/канала? нужно правило",,9199023.0
+reservations,R0045,reservations.csv,46.0,V017,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,188,280 — это комиссия эквайринга/канала? нужно правило",,9902337.0
+reservations,R0050,reservations.csv,51.0,V014,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,186,469 — это комиссия эквайринга/канала? нужно правило",,7909795.0
+reservations,R0055,reservations.csv,56.0,V001,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,923,902 — это комиссия эквайринга/канала? нужно правило",,11317071.0
+reservations,R0060,reservations.csv,61.0,V016,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 2,032,712 — это комиссия эквайринга/канала? нужно правило",,13551414.0
+reservations,R0065,reservations.csv,66.0,V012,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,220,597 — это комиссия эквайринга/канала? нужно правило",,10171643.0
+reservations,R0070,reservations.csv,71.0,V009,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,772,286 — это комиссия эквайринга/канала? нужно правило",,10425210.0
+reservations,R0075,reservations.csv,76.0,V010,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,110,497 — это комиссия эквайринга/канала? нужно правило",,7403313.0
+reservations,R0080,reservations.csv,81.0,V008,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 708,059 — это комиссия эквайринга/канала? нужно правило",,5900495.0
+reservations,R0085,reservations.csv,86.0,V003,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,687,048 — это комиссия эквайринга/канала? нужно правило",,14058734.0
+reservations,R0090,reservations.csv,91.0,V013,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 877,686 — это комиссия эквайринга/канала? нужно правило",,5851243.0
+reservations,R0095,reservations.csv,96.0,V017,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 499,279 — это комиссия эквайринга/канала? нужно правило",,2936935.0
+reservations,R0100,reservations.csv,101.0,V004,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,604,064 — это комиссия эквайринга/канала? нужно правило",,13367197.0
+reservations,R0105,reservations.csv,106.0,V010,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,657,065 — это комиссия эквайринга/канала? нужно правило",,11047098.0
+reservations,R0110,reservations.csv,111.0,V011,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 997,116 — это комиссия эквайринга/канала? нужно правило",,8309300.0
+reservations,R0115,reservations.csv,116.0,V017,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,790,402 — это комиссия эквайринга/канала? нужно правило",,14920013.0
+reservations,R0120,reservations.csv,121.0,V010,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 459,957 — это комиссия эквайринга/канала? нужно правило",,3066379.0
+reservations,R0125,reservations.csv,126.0,V014,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 2,338,132 — это комиссия эквайринга/канала? нужно правило",,13753716.0
+reservations,R0130,reservations.csv,131.0,V020,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,869,459 — это комиссия эквайринга/канала? нужно правило",,12463059.0
+reservations,R0135,reservations.csv,136.0,V015,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,943,758 — это комиссия эквайринга/канала? нужно правило",,11433870.0
+reservations,R0140,reservations.csv,141.0,V004,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,081,260 — это комиссия эквайринга/канала? нужно правило",,9010497.0
+reservations,R0145,reservations.csv,146.0,V015,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 1,496,136 — это комиссия эквайринга/канала? нужно правило",,9974242.0
+reservations,R0150,reservations.csv,151.0,V009,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 2,501,060 — это комиссия эквайринга/канала? нужно правило",,14712115.0
+reservations,R0015,reservations.csv,152.0,V003,DIRECT_WITH_OTA_FEE,info,"channel=Direct, ota_fee 2,316,929 — это комиссия эквайринга/канала? нужно правило",,13628994.0
