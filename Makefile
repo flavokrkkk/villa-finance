@@ -19,3 +19,16 @@ report:
 
 ingest:
 	$(BIN)/python scripts/ingest.py
+
+# --- Docker: нужен только Docker, Python ставить не надо
+.PHONY: up down docker-test
+
+up:
+	docker compose up --build -d
+	@echo "Dashboard: http://localhost:8501"
+
+down:
+	docker compose down
+
+docker-test:
+	docker compose run --rm --no-deps dashboard python -m pytest -q -p no:cacheprovider

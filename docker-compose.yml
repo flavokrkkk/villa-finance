@@ -1,0 +1,11 @@
+name: villa-finance
+
+services:
+  dashboard:
+    build: .
+    image: villa-finance
+    ports:
+      - "8501:8501"
+    # CSV монтируются только для чтения: можно подменить данные без пересборки образа
+    volumes:
+      - ./data/raw:/app/data/raw:ro

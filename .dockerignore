@@ -1,0 +1,8 @@
+.venv/
+.git/
+.claude/
+.pytest_cache/
+**/__pycache__/
+output/warehouse.db
+docs/screenshots/
+.DS_Store
